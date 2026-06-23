@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p class="title">Rock Paper Scisssors</p>
+    <button onclick="
+    playGame('rock');
+    " class="move-button"><img src="https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png" alt="Rock" class="move-icon"></button>
+
+    <button onclick="
+    playGame('paper');
+    " class="move-button"><img src="https://supersimple.dev/projects/rock-paper-scissors/images/paper-emoji.png" alt="Paper" class="move-icon" ></button>
+
+    <button onclick="
+    playGame('scissors');
+    " class="move-button"><img src="https://supersimple.dev/projects/rock-paper-scissors/images/scissors-emoji.png" alt="Scissors" class="move-icon"></button>
+
+    <p class="js-result result"></p>
+
+    <p class="js-moves"></p>
+
+    <p class="js-score score"></p>
+
+    <button onclick="
+      score.wins = 0;
+      score.loses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+      " class="reset-score-button">Reset Score</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
