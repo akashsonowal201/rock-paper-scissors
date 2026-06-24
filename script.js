@@ -13,9 +13,8 @@ function autoPlay(){
 
   const buttonElement = document.querySelector('.autoplay-button-changing');
 
-
   if(!isAutoPlaying){
-    intervalId = setInterval(function(){
+    intervalId = setInterval(() => {
     const playerMove = pickcomputerMove();
     playGame(playerMove);
   }, 1000);
@@ -30,6 +29,29 @@ function autoPlay(){
   }
  
 }
+
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+  playGame('rock');
+});
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+  playGame('paper');
+});
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+  playGame('scissors');
+});
+
+document.body.addEventListener('keydown', (event) => {
+  const key = event.key.toLowerCase();
+  if(key === 'r'){
+    playGame('rock');
+  }else if(key === 'p'){
+    playGame('paper');
+  }else if(key === 's' ){
+    playGame('scissors');
+  }
+});
 
 function playGame(playerMove){
 
