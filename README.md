@@ -1,4 +1,3 @@
-# rock-paper-scissors
 # Rock Paper Scissors Game
 
 A simple Rock Paper Scissors game built using HTML, CSS, and JavaScript. This project was created to practice JavaScript fundamentals such as DOM manipulation, event handling, local storage, and game logic.
