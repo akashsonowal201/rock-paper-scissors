@@ -24,13 +24,23 @@
 
     <p class="js-score score"></p>
 
+    <!--added reset score button-->
+
     <button onclick="
       score.wins = 0;
       score.loses = 0;
       score.ties = 0;
       localStorage.removeItem('score');
       updateScoreElement();
-      " class="reset-score-button">Reset Score</button>
+      " class="reset-score-button">Reset Score
+    </button>
+
+    <!--added the autoplay button -->
+
+    <button class ="auto-play-button autoplay-button-changing"  onclick="
+      autoPlay();
+    ">Auto PLay</button>
+
 
     <script src="script.js"></script>
   </body>
